@@ -127,6 +127,8 @@ public final class ImagePickerPlugin: NSObject, FlutterPlugin, ImagePickerApi,
     var config = PHPickerConfiguration(photoLibrary: PHPhotoLibrary.shared())
     config.selectionLimit = context.maxItemCount
     config.preferredAssetRepresentationMode = .current
+    // Enable ordered selection to display selection numbers (1, 2, 3...) in picker UI
+    config.selection = .ordered
     var filters: [PHPickerFilter] = []
     if context.includeImages {
       filters.append(.images)
