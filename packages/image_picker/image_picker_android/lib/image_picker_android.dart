@@ -23,8 +23,8 @@ class ImagePickerAndroid extends ImagePickerPlatform {
   /// On earlier Android versions, setting this to false uses the legacy
   /// `ACTION_GET_CONTENT` picker instead of the Photo Picker.
   ///
-  /// Defaults to false.
-  bool useAndroidPhotoPicker = false;
+  /// Defaults to true to use the modern Photo Picker UI instead of file picker.
+  bool useAndroidPhotoPicker = true;
 
   /// Registers this class as the default platform implementation.
   static void registerWith() {
